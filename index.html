@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,10 +8,13 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header class="headermenu">
-        <input type="checkbox" class="headermenu__checkbox" />
-        <menu class="drawer drawer--desktop drawer--mobile">
-            <li class=""></li>
+    <header class="header header--desktop header--mobile header--flex">
+        <a class="headerlink" title="Till startsidan" href="./index.html">
+            <img class="headerlink__logo" alt="Logo" src="#" />
+        </a>
+        <input type="checkbox" title="Öppna drawen" class="headercheckbox headercheckbox--desktop" />
+        <menu class="drawer drawer--mobile">
+            <li class="drawer__menuitem"></li>
         </menu>
     </header>
 </body>

@@ -1,6 +1,65 @@
+/* Variables */
 :root {
+    /* Header */
+    --header-background: #191919;
+    --header-color: #e1e1e1;
     /* Drawer */
     --drawer-background: #191919;
     --drawer-color: #e1e1e1;
     --drawer-icon-color: #c7c7c7;
+}
+
+/* Main */
+html, body {
+    width: 100vw;
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Header */
+.header {
+    background-color: var(--header-background);
+    color: var(--header-color);
+    min-width: 100vw;
+    min-height: 2.5em;
+}
+
+.header--flex {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.header--mobile + .headercheckbox:checked {
+    height: 2.5em;
+}
+
+/* Drawer */
+.headercheckbox:checked + .drawer--mobile {
+    background-color: var(--drawer-background);
+    color: var(--drawer-color);
+    visibility: visible;
+    width: 100vw;
+    height: 100vh;
+}
+
+.drawer {
+    height: 0px;
+    width: 0px;
+}
+
+.drawer--mobile {
+    visibility: hidden;
+}
+
+/* Desktop */
+@media (orientation:landscape) {
+    .headercheckbox--desktop {
+        visibility: hidden;
+    }
 }
