@@ -27,18 +27,37 @@
     font-size: 2.5em;
 }
 
+.headerlink__logo, .drawerlink_logo {
+    height: 64px;
+    width: 64px;
+}
+
+.headerlink__logo:hover, .drawerlink_logo:hover {
+    height: 70px;
+    width: 70px;
+    transition: all ease-in-out .15s;
+}
+
+.headerlabel__open, .drawerlabel__close {
+    position: absolute;
+    right: 3em;
+}
+
 /* Header */
 .header {
     background-color: var(--header-drawer-background);
     color: var(--header-drawer-link-color);
     min-width: 100vw;
-    min-height: 2.5em;
+    min-height: 4.65em;
+    position: sticky;
+    top: 0px;
 }
 
 .header--flex, .drawersection--flex {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
+    justify-content: center;
 }
 
 #headercheckbox {
@@ -46,7 +65,7 @@
 }
 
 /* Drawer */
-.drawer {
+.drawer, #headercheckbox {
     height: 0px;
     width: 0px;
 }
@@ -69,7 +88,7 @@
 
 .drawersection {
     width: 100%;
-    height: 4em;
+    min-height: 4.65em;
 }
 
 .drawersection__outline {
