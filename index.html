@@ -4,16 +4,35 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Frontend konferener runt omkring Sverige | Better Web</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header class="header header--desktop header--mobile header--flex">
+    <header class="header header--flex">
         <a class="headerlink" title="Till startsidan" href="./index.html">
-            <img class="headerlink__logo" alt="Logo" src="#" />
+            <img class="headerlink__logo" alt="Logotyp" src="#" />
         </a>
-        <input type="checkbox" title="Öppna drawen" class="headercheckbox headercheckbox--desktop" />
-        <menu class="drawer drawer--mobile">
+        <label class="headerlabel headerlabel__open" for="headercheckbox" title="Öppna drawen">
+            <span class="headerspan__icon material-symbols-outlined">
+                menu
+            </span>
+        </label>
+        <input type="checkbox" id="headercheckbox" />
+        <menu class="drawer drawer--responsive">
+            <section class="drawersection drawersection--flex drawersection__toolbar">
+                <a class="drawerlink" title="Till startsidan" href="./index.html">
+                    <img class="headerlink__logo" alt="Logotyp" src="#" />
+                </a>
+                <label class="drawerlabel drawerlabel__close" for="headercheckbox" title="Stäng drawen">
+                    <span class="drawerspan__icon material-symbols-outlined">
+                        close
+                    </span>
+                </label>
+            </section>
+            <section class="drawersection drawersection--flex drawersection__quickbar">
+
+            </section>
             <li class="drawer__menuitem"></li>
         </menu>
     </header>

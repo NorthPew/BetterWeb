@@ -29,37 +29,43 @@ html, body {
     min-height: 2.5em;
 }
 
-.header--flex {
+.header--flex, .drawersection--flex {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
 }
 
-.header--mobile + .headercheckbox:checked {
-    height: 2.5em;
+#headercheckbox {
+    visibility: hidden;
 }
 
 /* Drawer */
-.headercheckbox:checked + .drawer--mobile {
-    background-color: var(--drawer-background);
-    color: var(--drawer-color);
-    visibility: visible;
-    width: 100vw;
-    height: 100vh;
-}
-
 .drawer {
     height: 0px;
     width: 0px;
 }
 
-.drawer--mobile {
+#headercheckbox:checked + .drawer--responsive {
+    background-color: var(--drawer-background);
+    color: var(--drawer-color);
+    visibility: visible;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+}
+
+
+.drawersection {
+
+}
+
+.drawer--responsive {
     visibility: hidden;
 }
 
 /* Desktop */
 @media (orientation:landscape) {
-    .headercheckbox--desktop {
-        visibility: hidden;
-    }
 }
