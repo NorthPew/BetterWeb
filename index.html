@@ -8,7 +8,8 @@
     <title>Frontend konferener runt omkring Sverige | Better Web</title>
     <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="pagebody pagebody--light">
+    <!-- Header -->
     <header class="header header--flex">
         <a class="headerlink" title="Till startsidan" href="./index.html">
             <img class="headerlink__logo" alt="Logotyp" src="#" />
@@ -18,8 +19,9 @@
                 menu
             </span>
         </label>
+        <!-- Nav & Drawer -->
         <input type="checkbox" id="headercheckbox" />
-        <menu class="drawer drawer--responsive">
+        <section class="drawer drawer--responsive">
             <section class="drawersection drawersection--flex drawersection__toolbar">
                 <a class="drawerlink" title="Till startsidan" href="./index.html">
                     <img class="headerlink__logo" alt="Logotyp" src="#" />
@@ -30,11 +32,43 @@
                     </span>
                 </label>
             </section>
-            <section class="drawersection drawersection--flex drawersection__quickbar">
-
+            <section class="drawersection drawersection--flex drawersection--center drawersection__outline drawersection__quickbar">
+                <ul class="drawerlist drawerlist--row">
+                    <li class="drawerlist__item">
+                        <a class="drawerlist__link" title="Profil" href="#">
+                            <span class="drawerspan__icon material-symbols-outlined">
+                                person
+                            </span>
+                        </a>
+                    </li>
+                    <li class="drawerlist__item">
+                        <a class="drawerlist__link" title="Lokaltion till konferensen" href="#">
+                            <span class="drawerspan__icon material-symbols-outlined">
+                                location_on
+                            </span>
+                        </a>
+                    </li>
+                    <li class="drawerlist__item">
+                        <a class="drawerlist__link" title="Uppslagsbok" href="#">
+                            <span class="drawerspan__icon material-symbols-outlined">
+                                book
+                            </span>
+                        </a>
+                    </li>
+                    <li class="drawerlist__item">
+                        <a class="drawerlist__link" title="Schema för seminarium" href="#">
+                            <span class="drawerspan__icon material-symbols-outlined">
+                                event
+                            </span>
+                        </a>
+                    </li>
+                </ul>
             </section>
-            <li class="drawer__menuitem"></li>
-        </menu>
+            <!-- Nav Menu When Opened -->
+            <menu class="drawermenu drawermenu--column">
+                <li class="drawer__menuitem"></li>
+            </menu>
+        </section>
     </header>
 </body>
 </html>
