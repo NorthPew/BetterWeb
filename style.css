@@ -1,7 +1,7 @@
 /* Variables */
 :root {
-    --header-drawer-link-color: #e1e1e1;
-    --header-drawer-background: #191919;
+    --menu-color: #e1e1e1;
+    --menu-background: #191919;
 }
 
 /* Main */
@@ -16,37 +16,15 @@
     padding: 0px;
 }
 
-/* Links & Icons */
-.drawerlist__link:link, .drawerlist__link:visited,
-.drawerlink:link, .drawerlink:visited,
-.headerlink:link, .headerlink:visited {
-    color: var(--header-drawer-link-color);
-}
-
-.drawerspan__icon, .headerspan__icon {
-    font-size: 2.5em;
-}
-
-.headerlink__logo, .drawerlink_logo {
-    height: 64px;
-    width: 64px;
-}
-
-.headerlink__logo:hover, .drawerlink_logo:hover {
-    height: 70px;
-    width: 70px;
-    transition: all ease-in-out .15s;
-}
-
-.headerlabel__open, .drawerlabel__close {
-    position: absolute;
-    right: 3em;
+@font-face {
+    font-family: Poppins;
+    src: url(./fonts/Poppins-Black.ttf);
 }
 
 /* Header */
 .header {
-    background-color: var(--header-drawer-background);
-    color: var(--header-drawer-link-color);
+    background-color: var(--menu-background);
+    color: var(--menu-color);
     min-width: 100vw;
     min-height: 4.65em;
     position: sticky;
@@ -75,8 +53,8 @@
 }
 
 #headercheckbox:checked + .drawer--responsive {
-    background-color: var(--header-drawer-background);
-    color: var(--drawer-color);
+    background-color: var(--menu-background);
+    color: var(--menu-color);
     visibility: visible;
     width: 100vw;
     height: 100vh;
@@ -84,6 +62,7 @@
     top: 0px;
     left: 0px;
     z-index: 999;
+    overflow: hidden;
 }
 
 .drawersection {
@@ -104,20 +83,87 @@
     list-style-type: none;
 }
 
-.drawerspan__icon {
-    transition: font-size ease-in-out .1s;
-}
-
-.drawerspan__icon:hover {
-   font-size: 3em
-} 
-
 .drawerlist--row {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
 }
 
+.drawersection__links {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.drawersection__links--column {
+    flex-flow: column wrap;
+}
+
+
+/* Menu Stuff for Header and Drawer */
+.drawerlist__iconlink:link, .drawerlist__iconlink:visited,
+.drawerlist__link:link, .drawerlist__link:visited,
+.menulink:link, .menulink:visited {
+    color: var(--menu-color);
+}
+
+.menuspan__icon, .menuspan__openclose {
+    font-size: 2.5em;
+}
+
+.menulink__logo {
+    height: 64px;
+    width: 64px;
+}
+
+.menulink__logo:hover {
+    height: 70px;
+    width: 70px;
+    transition: all ease-in-out .15s;
+}
+
+.menulabel__openclose {
+    position: absolute;
+    right: 3em;
+}
+
+.menuspan__icon, .menuspan__openclose {
+    transition: font-size ease-in-out .15s;
+}
+
+.menuspan__icon:hover, .menuspan__openclose:hover {
+   font-size: 3em
+}
+
+.drawerlist__link {
+    width: 100%;
+    height: 2em;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    margin-left: 0.5em;
+    font-family: 'Poppins', sans-serif;
+}
+
+.drawerlist__link:hover {
+    transition: all ease-in-out .15s;
+    border-bottom: 5px solid var(--menu-color);
+    font-size: 28px;
+    align-items: flex-end;
+    margin-left: 1em;
+}
+
 /* Desktop */
 @media (orientation:landscape) {
+    /* Drawer */
+    .drawerlist__link {
+        margin-left: 0em;
+        justify-content: center;
+        font-size: 24px;
+    }
+    .drawerlist__link:hover {
+        margin-left: 0em;
+        font-size: 32px;
+    }
 }

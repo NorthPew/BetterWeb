@@ -8,66 +8,70 @@
     <title>Frontend konferener runt omkring Sverige | Better Web</title>
     <link rel="stylesheet" href="style.css" />
 </head>
-<body class="pagebody pagebody--light">
+<body class="pagebody">
     <!-- Header -->
     <header class="header header--flex">
-        <a class="headerlink" title="Till startsidan" href="./index.html">
-            <img class="headerlink__logo" alt="Logotyp" src="./imgs/BetterWebIcon.png" />
+        <a class="menulink" title="Till startsidan" href="./index.html">
+            <img class="menulink__logo" alt="Logotyp" src="./imgs/BetterWebIcon.png" />
         </a>
-        <label class="headerlabel headerlabel__open" for="headercheckbox" title="Öppna drawen">
-            <span class="headerspan__icon material-symbols-outlined">
+        <label class="menulabel__openclose" for="headercheckbox" title="Öppna drawen">
+            <span class="menuspan__openclose material-symbols-outlined">
                 menu
             </span>
         </label>
-        <!-- Nav & Drawer -->
+        <!-- Drawer -->
         <input type="checkbox" id="headercheckbox" />
         <section class="drawer drawer--responsive">
-            <section class="drawersection drawersection--flex drawersection__toolbar">
-                <a class="drawerlink" title="Till startsidan" href="./index.html">
-                    <img class="headerlink__logo" alt="Logotyp" src="./imgs/BetterWebIcon.png" />
+            <section class="drawersection drawersection--flex">
+                <a class="menulink" title="Till startsidan" href="./index.html">
+                    <img class="menulink__logo" alt="Logotyp" src="./imgs/BetterWebIcon.png" />
                 </a>
-                <label class="drawerlabel drawerlabel__close" for="headercheckbox" title="Stäng drawen">
-                    <span class="drawerspan__icon material-symbols-outlined">
+                <label class="menulabel__openclose" for="headercheckbox" title="Stäng drawen">
+                    <span class="menuspan__openclose material-symbols-outlined">
                         close
                     </span>
                 </label>
             </section>
-            <section class="drawersection drawersection--flex drawersection__outline drawersection__quickbar">
+            <!-- Quick Buttons -->
+            <section class="drawersection drawersection--flex drawersection__outline">
                 <ul class="drawerlist drawerlist--row">
                     <li class="drawerlist__item">
-                        <a class="drawerlist__link" title="Profil" href="#">
-                            <span class="drawerspan__icon material-symbols-outlined">
+                        <a class="drawerlist__iconlink" title="Profil" href="#">
+                            <span class="menuspan__icon material-symbols-outlined">
                                 person
                             </span>
                         </a>
                     </li>
                     <li class="drawerlist__item">
-                        <a class="drawerlist__link" title="Lokaltion till konferensen" href="#">
-                            <span class="drawerspan__icon material-symbols-outlined">
+                        <a class="drawerlist__iconlink" title="Lokaltion till konferensen" href="#">
+                            <span class="menuspan__icon material-symbols-outlined">
                                 location_on
                             </span>
                         </a>
                     </li>
                     <li class="drawerlist__item">
-                        <a class="drawerlist__link" title="Uppslagsbok" href="#">
-                            <span class="drawerspan__icon material-symbols-outlined">
+                        <a class="drawerlist__iconlink" title="Uppslagsbok" href="#">
+                            <span class="menuspan__icon material-symbols-outlined">
                                 book
                             </span>
                         </a>
                     </li>
                     <li class="drawerlist__item">
-                        <a class="drawerlist__link" title="Schema för seminarium" href="#">
-                            <span class="drawerspan__icon material-symbols-outlined">
+                        <a class="drawerlist__iconlink" title="Schema för seminarium" href="#">
+                            <span class="menuspan__icon material-symbols-outlined">
                                 event
                             </span>
                         </a>
                     </li>
                 </ul>
             </section>
-            <!-- Nav Menu When Opened -->
-            <menu class="drawermenu drawermenu--column">
-                <li class="drawer__menuitem"></li>
-            </menu>
+            <!-- Links -->
+            <section class="drawersection__links drawersection__links--column">
+                <a class="drawerlist__link" title="Startsidan" href="./index.html">Hem</a>
+                <a class="drawerlist__link"  title="Änmala sig till seminarium" href="./index.html">Anmäla</a>
+                <a class="drawerlist__link" title="Om oss" href="./index.html">Om oss</a>
+                <a  class="drawerlist__link" title="Kontakta oss" href="./index.html">Kontakta oss</a>
+            </section>
         </section>
     </header>
 </body>
