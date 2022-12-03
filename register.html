@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <title>Frontend konferener runt omkring Sverige | Better Web - Startsidan</title>
+    <title>Frontend konferener runt omkring Sverige | Better Web - Anmälan</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 <body class="pagebody">
@@ -74,5 +74,37 @@
             </section>
         </section>
     </header>
+    <main class="container container--flex">
+        <section>
+            <h1>Några förord</h1>
+            <p>
+                Vad roligt att se att Ni vill anmäla Er till <strong>Better Webs</strong> konferens, som vi hållit årlingen de senaste 3 åren!
+            </p>
+            <p>
+                Att anmäla sig till de olika seminarium som vi erbjuder, tar minst bara 3 minuter av din tid att gå igenom. För att anmäla sig måste man vara minst av myndig ålder.
+            </p>
+        </section>
+        <form>
+            <h2>Anmälan</h2>
+            <h3>Allmänt</h3>
+            <label for="register_name">Vad heter Ni?</label>
+            <input id="register_name" type="text" value="" minlength="7" maxlength="32" placeholder="Per Bolund" title="Förnamn och efternamn" />
+
+            <label for="register_age">Hur gammal är Ni?</label>
+            <input id="register_age" type="number" value="18" min="18" placeholder="25" title="Ålder" />
+
+            <p>Hur vill du bli meddelad?</p>
+            <label for="register_get_contacted_sms">Genom SMS</label>
+            <input id="register_get_contacted_sms" type="radio" name="register_get_contacted" value="sms" />
+            <label for="register_get_contacted_mail">Genom E-post</label>
+            <input id="register_get_contacted_mail" type="radio" name="register_get_contacted" value="epost" />
+
+            <label for="register_phone">Skriv in ditt telefonnummer:</label>
+            <input id="register_phone" type="tel" maxlength="15" value="" placeholder="08-545 224 50" title="Telefonnummer" />
+
+            <label for="register_email">Skriv in din E-post:</label>
+            <input id="register_email" type="email" value="" placeholder="per.bolund@email.se" title="E-postadress" />
+        </form>
+    </main>
 </body>
 </html>
