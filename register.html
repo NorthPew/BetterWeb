@@ -81,29 +81,37 @@
                 Vad roligt att se att Ni vill anmäla Er till <strong>Better Webs</strong> konferens, som vi hållit årlingen de senaste 3 åren!
             </p>
             <p>
-                Att anmäla sig till de olika seminarium som vi erbjuder, tar minst bara 3 minuter av din tid att gå igenom. För att anmäla sig måste man vara minst av myndig ålder.
+                Behöver Ni övernatta så är vi glada att meddela Er att vi har snackat med lokala hotell, som kommer erbjuda rum och måltid för ett rabatterat pris!
+            </p>
+            <p>
+                Att anmäla sig till de olika seminarium som vi erbjuder, tar minst bara 3 minuter av din tid att gå igenom. För att anmäla sig måste man vara minst av myndig ålder. Man behöver även betala 100 kr för éntren och som ett tecken att Ni har verkligen anmält er.
             </p>
         </section>
         <form>
-            <h2>Anmälan</h2>
+            <h2>Anmälan till vår nästkommande konferens i Karlstad</h2>
             <h3>Allmänt</h3>
             <label for="register_name">Vad heter Ni?</label>
-            <input id="register_name" type="text" value="" minlength="7" maxlength="32" placeholder="Per Bolund" title="Förnamn och efternamn" />
+            <input id="register_name" type="text" value="" minlength="7" maxlength="32" placeholder="Per Bolund" title="Förnamn och efternamn" required />
 
             <label for="register_age">Hur gammal är Ni?</label>
-            <input id="register_age" type="number" value="18" min="18" placeholder="25" title="Ålder" />
+            <input id="register_age" type="number" value="18" min="18" placeholder="25" title="Ålder" required />
 
             <p>Hur vill du bli meddelad?</p>
             <label for="register_get_contacted_sms">Genom SMS</label>
-            <input id="register_get_contacted_sms" type="radio" name="register_get_contacted" value="sms" />
-            <label for="register_get_contacted_mail">Genom E-post</label>
-            <input id="register_get_contacted_mail" type="radio" name="register_get_contacted" value="epost" />
+            <input id="register_get_contacted_sms" type="radio" name="register_get_contacted" value="sms" required />
 
             <label for="register_phone">Skriv in ditt telefonnummer:</label>
             <input id="register_phone" type="tel" maxlength="15" value="" placeholder="08-545 224 50" title="Telefonnummer" />
 
+            <label for="register_get_contacted_mail">Genom E-post</label>
+            <input id="register_get_contacted_mail" type="radio" name="register_get_contacted" value="epost" />
+
             <label for="register_email">Skriv in din E-post:</label>
             <input id="register_email" type="email" value="" placeholder="per.bolund@email.se" title="E-postadress" />
+
+            <p>Känner du dig klar med anmälningen?</p>
+            <button type="submit">Ja, skicka in anmälan</button>
+            <button type="reset">Nej, jag vill göra om formuläret</button>
         </form>
     </main>
 </body>
