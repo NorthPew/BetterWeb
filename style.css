@@ -5,7 +5,7 @@
 }
 
 /* Main */
-.pagebody {
+.page_body {
     width: 100vw;
     height: 100%;
 }
@@ -31,19 +31,19 @@
     top: 0px;
 }
 
-.header--flex, .drawersection--flex {
+.header--flex, .drawer_section--flex {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
 }
 
-#headercheckbox {
+#header_checkbox {
     visibility: hidden;
 }
 
 /* Drawer */
-.drawer, #headercheckbox {
+.drawer, #header_checkbox {
     height: 0px;
     width: 0px;
 }
@@ -52,7 +52,7 @@
     visibility: hidden;
 }
 
-#headercheckbox:checked + .drawer--responsive {
+#header_checkbox:checked + .drawer--responsive {
     background-color: var(--menu-background);
     color: var(--menu-color);
     visibility: visible;
@@ -65,77 +65,77 @@
     overflow: hidden;
 }
 
-.drawersection {
+.drawer_section {
     width: 100%;
     min-height: 4.65em;
 }
 
-.drawersection__outline {
+.drawer_section__outline {
     border-bottom: 1px solid #c7c7c7;
     border-top: 1px solid #c7c7c7;
 }
 
-.drawersection--center {
+.drawer_section--center {
     justify-content: center;
 }
 
-.drawerlist .drawerlist__item {
+.drawer_list .drawer_list__item {
     list-style-type: none;
 }
 
-.drawerlist--row {
+.drawer_list--row {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
 }
 
-.drawersection__links {
+.drawer_section__links {
     width: 100%;
     height: auto;
     display: flex;
 }
 
-.drawersection__links--column {
+.drawer_section__links--column {
     flex-flow: column wrap;
 }
 
 
 /* Menu Stuff for Header and Drawer */
-.drawerlist__iconlink:link, .drawerlist__iconlink:visited,
-.drawerlist__link:link, .drawerlist__link:visited,
-.menulink:link, .menulink:visited {
+.drawer_list__iconlink:link, .drawer_list__iconlink:visited,
+.drawer_list__link:link, .drawer_list__link:visited,
+.menu_link:link, .menu_link:visited {
     color: var(--menu-color);
 }
 
-.menuspan__icon, .menuspan__openclose {
+.menu_span__icon, .menu_span__openclose {
     font-size: 2.5em;
 }
 
-.menulink__logo {
+.menu_link__logo {
     height: 64px;
     width: 64px;
 }
 
-.menulink__logo:hover {
+.menu_link__logo:hover {
     height: 70px;
     width: 70px;
     transition: all ease-in-out .15s;
 }
 
-.menulabel__openclose {
+.menu_label__openclose {
     position: absolute;
     right: 3em;
 }
 
-.menuspan__icon, .menuspan__openclose {
+.menu_span__icon, .menu_span__openclose {
     transition: font-size ease-in-out .15s;
 }
 
-.menuspan__icon:hover, .menuspan__openclose:hover {
+.menu_span__icon:hover, .menu_span__openclose:hover {
    font-size: 3em
 }
 
-.drawerlist__link {
+.drawer_list__link {
     width: 100%;
     height: 2em;
     text-decoration: none;
@@ -146,7 +146,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.drawerlist__link:hover {
+.drawer_list__link:hover {
     transition: all ease-in-out .15s;
     border-bottom: 5px solid var(--menu-color);
     font-size: 28px;
@@ -171,12 +171,12 @@
 /* Desktop */
 @media (orientation:landscape) {
     /* Drawer */
-    .drawerlist__link {
+    .drawer_list__link {
         margin-left: 0em;
         justify-content: center;
         font-size: 24px;
     }
-    .drawerlist__link:hover {
+    .drawer_list__link:hover {
         margin-left: 0em;
         font-size: 32px;
     }
