@@ -87,18 +87,22 @@
                 Att anmäla sig, tar minst 3 minuter av din tid att gå igenom. För att anmäla sig måste man vara minst av myndig ålder. Att vara med på hela konferensen kostar 120 kr och enskild dag kostar 50 kr. Två dagar kostar 100 kr.
             </p>
         </section>
-        <form>
+        <form action="#">
             <h2>Anmälan till vår nästkommande konferens i Karlstad</h2>
+
+            <!-- Förnamn och efternamn -->
             <label for="register_name">Vad heter Ni?</label>
             <input id="register_name" type="text" value="" minlength="7" maxlength="32" placeholder="Per Bolund" title="Förnamn och efternamn" required />
             <span class="form_error_msg form_error_msg--hiddden">Vänligen skriv in ditt fulla namn.</span>
 
+            <!-- Ålder -->
             <label for="register_age">Hur gammal är Ni?</label>
             <input id="register_age" type="number" value="18" min="18" placeholder="25" title="Ålder" required />
             <span class="form_error_msg form_error_msg--hiddden">Vänligen välj din ålder.</span>
 
+            <!-- Antalet dagar -->
             <p>Vill du vara med på hela konferensen (3 dagar, 9/12 till 11/12), eller vill du vara här nån dag?</p>
-            <input id="register_for_conference_all" type="radio" name="register_for_conference" value="all" />
+            <input id="register_for_conference_all" type="radio" name="register_for_conference" value="all" required />
             <label for="register_for_conference_all">Hela konferensen</label>
 
             <input id="register_for_conference_day" type="radio" name="register_for_conference" value="day" />
@@ -106,22 +110,44 @@
 
             <input id="register_for_conference_days"  type="radio" name="register_for_conference" value="days" />
             <label for="register_for_conference_days">Två av tre dagar</label>
+
+            <!-- Mat -->
+            <p>Vill du bli erbjuden mat till konferensen? Kostnaden räknas ihop med antalet dagar du är med oss. Måltiderna kostar 50 kr och betalas hos hotellet.</p>
+            <input id="register_food_yes" type="radio" name="register_food" value="ja" required/>
+            <label for="register_food_yes">Ja, jag vill ha mat!</label>
+
+            <div class="form_box form_box--hidden">
+                <input id="register_food_normal" type="radio" name="register_food_option" value="vanlig" required/>
+                <label for="register_food_normal">Vanlig kost (glutenfri)</label>
+
+                <input id="register_food_vegan" type="radio" name="register_food_option" value="vegan" required/>
+                <label for="register_food_vegan">Vegansk kost (glutenfri)</label>
+            </div>
+
+            <input id="register_food_no" type="radio" name="register_food" value="nej"/>
+            <label for="register_food_no">Nej, jag behöver ingen mat.</label>
             
+            <!-- Kontaktad -->
             <p>Hur vill du bli meddelad?</p>
             <input id="register_get_contacted_sms" type="radio" name="register_get_contacted" value="sms" required />
             <label for="register_get_contacted_sms">Genom SMS</label>
 
-            <label for="register_phone">Skriv in ditt telefonnummer:</label>
-            <input id="register_phone" type="tel" maxlength="15" value="" placeholder="08-545 224 50" title="Telefonnummer" />
-            <span class="form_error_msg form_error_msg--hiddden">Vänligen skriv in ditt telefonnummer.</span>
+            <div class="form_box form_box--hidden">
+                <label for="register_phone">Skriv in ditt telefonnummer:</label>
+                <input id="register_phone" type="tel" maxlength="15" value="" placeholder="08-545 224 50" title="Telefonnummer" required />
+                 <span class="form_error_msg form_error_msg--hiddden">Vänligen skriv in ditt telefonnummer.</span>
+            </div>
 
             <input id="register_get_contacted_mail" type="radio" name="register_get_contacted" value="epost" />
             <label for="register_get_contacted_mail">Genom E-post</label>
 
-            <label for="register_email">Skriv in din E-post:</label>
-            <input id="register_email" type="email" value="" placeholder="per.bolund@email.se" title="E-postadress" />
-            <span class="form_error_msg form_error_msg--hiddden">Vänligen skriv in din E-postadress.</span>
+            <div class="form_box form_box--hidden">
+                <label for="register_email">Skriv in din E-post:</label>
+                <input id="register_email" type="email" value="" placeholder="per.bolund@email.se" title="E-postadress" required />
+                <span class="form_error_msg form_error_msg--hiddden">Vänligen skriv in din E-postadress.</span>
+            </div>
 
+            <!-- Klar med formulär -->
             <p>Känner du dig klar med anmälningen?</p>
             <button type="submit">Ja, skicka in anmälan</button>
             <button type="reset">Nej, jag vill göra om formuläret</button>
