@@ -10,67 +10,65 @@
 </head>
 <body class="page-body">
     <!-- Header -->
-    <header class="header header--flex">
-        <a class="menu-link" title="Till startsidan" href="./index.html">
-            <img class="menu-link__logo" alt="Logotyp" src="./imgs/BetterWebIcon.png" />
+    <header class="menu menu--flex">
+        <a class="menu__link" title="Till startsidan" href="./index.html">
+            <img class="menu__link-logo" alt="Logotyp" src="./imgs/BetterWebIcon.png" />
         </a>
-        <label class="menu-label__openclose" for="header-checkbox" title="Öppna drawen">
-            <span class="menu-span__openclose material-symbols-outlined">
-                menu
-            </span>
+        <label class="menu__label material-symbols-outlined" for="menu-checkbox" title="Öppna drawen">
+            menu
         </label>
         <!-- Drawer -->
-        <input type="checkbox" id="header-checkbox" />
-        <section class="drawer drawer--responsive">
-            <section class="drawer-section drawer-section--flex">
-                <a class="menu-link" title="Till startsidan" href="./index.html">
-                    <img class="menu-link__logo" alt="Logotyp" src="./imgs/BetterWebIcon.png" />
+        <input type="checkbox" id="menu-checkbox" />
+        <section class="drawer">
+            <section class="drawer__section drawer__section--flex">
+                <a class="menu__link" title="Till startsidan" href="./index.html">
+                    <img class="menu__link-logo" alt="Logotyp" src="./imgs/BetterWebIcon.png" />
                 </a>
-                <label class="menu-label__openclose" for="header-checkbox" title="Stäng drawen">
-                    <span class="menu-span__openclose material-symbols-outlined">
-                        close
-                    </span>
+                <label class="menu__label material-symbols-outlined" for="menu-checkbox" title="Stäng drawen">
+                    close
                 </label>
             </section>
             <!-- Quick Buttons -->
-            <section class="drawer-section drawer-section--flex drawer-section__outline">
-                <ul class="drawer-list drawer-list--row">
-                    <li class="drawer-list__item">
-                        <a class="drawer-list__iconlink" title="Profil" href="#">
-                            <span class="menu-span__icon material-symbols-outlined">
-                                person
-                            </span>
+            <section class="drawer__section drawer__section--flex drawer__section--outline">
+                <ul class="drawer__list drawer__list--row">
+                    <li class="drawer__list-item">
+                        <a class="drawer__list-icon  material-symbols-outlined" title="Profil" href="#">
+                            person
                         </a>
                     </li>
-                    <li class="drawer-list__item">
-                        <a class="drawer-list__iconlink" title="Lokaltion till konferensen" href="#">
-                            <span class="menu-span__icon material-symbols-outlined">
-                                location_on
-                            </span>
+                    <li class="drawer__list-item">
+                        <a class="drawer__list-icon  material-symbols-outlined" title="Lokaltion till konferensen" href="#">
+                            location_on
                         </a>
                     </li>
-                    <li class="drawer-list__item">
-                        <a class="drawer-list__iconlink" title="Uppslagsbok" href="#">
-                            <span class="menu-span__icon material-symbols-outlined">
-                                book
-                            </span>
+                    <li class="drawer__list-item">
+                        <a class="drawer__list-icon material-symbols-outlined" title="Uppslagsbok" href="#">
+                            book
                         </a>
                     </li>
-                    <li class="drawer-list__item">
-                        <a class="drawer-list__iconlink" title="Schema för seminarium" href="#">
-                            <span class="menu-span__icon material-symbols-outlined">
-                                event
-                            </span>
+                    <li class="drawer__list-item">
+                        <a class="drawer__list-icon material-symbols-outlined" title="Schema för seminarium" href="#">
+                            event
                         </a>
                     </li>
                 </ul>
             </section>
             <!-- Links -->
-            <section class="drawer-section__links drawer-section__links--column">
-                <a class="drawer-list__link" title="Startsidan" href="./index.html">Hem</a>
-                <a class="drawer-list__link"  title="Änmala sig till seminarium" href="./register.html">Anmäla</a>
-                <a class="drawer-list__link" title="Om oss" href="./index.html">Om oss</a>
-                <a  class="drawer-list__link" title="Kontakta oss" href="./index.html">Kontakta oss</a>
+            <section class="drawer__section-links drawer__section--desktop">
+                <ul class="drawer__list-links">
+                    <li class="drawer__list-item">
+                        <a class="drawer__list-link" title="Startsidan" href="./index.html">Hem</a>
+                    </li>            
+                    <li class="drawer__list-item">
+                        <a class="drawer__list-link"  title="Änmala sig till seminarium" href="./register.html">Anmäla</a>
+                    </li>            
+                    <li class="drawer__list-item">
+                        <a class="drawer__list-link" title="Om oss" href="./index.html">Om oss</a>
+                    </li>            
+                    <li class="drawer__list-item">
+                        <a  class="drawer__list-link" title="Kontakta oss" href="./index.html">Kontakta oss</a>
+                    </li>
+                </ul>
             </section>
         </section>
     </header>
