@@ -2,11 +2,17 @@
 :root {
     --menu-color: #e1e1e1;
     --menu-background: #191919;
+    --shadow-color: 0deg 0% 63%;
+    --shadow-medium:
+    0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36),
+    0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36),
+    2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.36),
+    5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
 }
 
 /* Main */
 .page-body {
-    width: 100vw;
+    width: 100%;
     height: 100%;
 }
 
@@ -31,6 +37,7 @@
     top: 0px;
     padding-left: 3em;
     padding-right: 3em;
+    user-select: none; 
 }
 
 .menu--flex, .drawer__section--flex {
@@ -51,7 +58,7 @@
     background-color: var(--menu-background);
     color: var(--menu-color);
     visibility: visible;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     position: absolute;
     top: 0px;
@@ -60,6 +67,7 @@
     overflow: hidden;
     padding-left: 3em;
     padding-right: 3em;
+    user-select: none; 
 }
 
 .drawer__section {
@@ -103,6 +111,7 @@
     justify-self: flex-end;
     align-self: flex-end;
     position: absolute;
+    cursor: pointer;
 }
 
 .menu__label, .drawer__list-icon {
@@ -142,17 +151,163 @@
 }
 
 /* Content */
-
-/* Container */
-.container {
-    width: 100vw;
+.content {
+    width: 100%;
     height: 100%;
+    background-color: #FFF;
+    padding: 1em;
+    padding-left: 1.35em;
+    padding-right: 1.35em;
 }
 
-.container--flex {
+.content--flex {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+}
+
+/* Container */
+.container {
+    width: 100%;
+}
+
+/* Message Box */
+.message-box {
+    box-shadow: var(--shadow-medium);
+    border-radius: 9.5px;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    background-color: #fbfbfb;
+    padding: 1.25em 1.75em;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.message-box > * {
+    padding: .25em 0em .25em;
+}
+
+/* Form */
+.form > *:not(.message-box) {
+    padding: .15em 0em .15em 0em;
+}
+
+.form--flex {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.form__heading {
+    text-align: center;
+}
+
+.form__box > p {
+    width: 100%;
+}
+
+.form__box--row {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.form__box--column {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.form__box--column > #register-name {
+    width: 20em;
+}
+
+.form__box--column > #register-age {
+    width: 6em;
+}
+
+.form__radio + .form__label {
+    padding-right: 1.5em;
+    padding-left: .25em;
+    cursor: pointer;
+}
+
+.form__radio {
+    width: 1.25em;
+    height: 1.25em;
+    margin-right: .35em;
+}
+
+.form__text {
+    border: 1.5px solid #191919;
+    border-radius: 4.5px;
+    padding-left: .75em;
+    padding: .35em;
+}
+
+.form__text:invalid {
+    border-color: #ee1111;
+    border-right: 1.75em solid #ee1111;
+}
+
+.input-error-msg--hidden {
+    visibility: hidden;
+    height: 0px;
+}
+
+.form__text:invalid + .input-error-msg--hidden {
+    visibility: visible;
+    height: auto;
+}
+
+.form__text:placeholder-shown + .input-error-msg--hidden {
+    visibility: hidden;
+    height: 0px;
+}
+
+.form__text:valid {
+    border-color: #50da1a;
+    border-right: 1.75em solid #50da1a;
+}
+
+.form__text:placeholder-shown {
+    border: 1.5px solid #191919;
+}
+
+.form__box-inside--hidden {
+    visibility: hidden;
+    height: 0px;
+}
+
+.form__radio:checked + .form__label + .form__box-inside--hidden {
+    visibility: visible;
+    height: auto;
+    display: flex;
+    box-shadow: var(--shadow-medium);
+    border-radius: 9.5px;
+    margin-bottom: 1.5em;
+    background-color: #fbfbfb;
+    padding: 1.25em 1.75em;
+    flex-flow: column wrap;
+    align-content: flex-start;
+    justify-content: center;
+    width: auto;
+}
+
+.form__button {
+    background-color: #fbfbfb;
+    border: .5px solid #191919;
+    border-radius: 4.5px;
+    cursor: pointer;
+    box-shadow: var(--shadow-medium);
+    padding: .75em 1.25em;
+}
+
+.form__box-buttons {
+    display: flex;
+    flex-flow: row wrap;
+    min-height: 5.25em;
+    justify-content: space-between;
+    align-content: space-between;
+    width: auto;
+    margin-top: .25em;
 }
 
 /* Desktop */
@@ -171,7 +326,19 @@
         justify-content: center;
     }
     /* Container */
-    .container > * {
-        width: 70vw;
+    .container--desktop {
+        width: 75vw;
+    }
+    /* Message Box */
+    .message-box {
+        padding: 1.75em 3.15em;
+    }
+    /* Form */
+    .form__radio:checked + .form__label + .form__box-inside--hidden {
+        height: 2em;
+        width: 32vw;
+    }
+    .form__box-buttons {
+        width: 20em;
     }
 }

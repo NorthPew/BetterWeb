@@ -72,84 +72,105 @@
             </section>
         </section>
     </header>
-    <main class="container container--flex">
-        <section>
-            <h1>Några förord</h1>
-            <p>
-                Vad roligt att se att Ni vill anmäla Er till <strong>Better Webs</strong> konferens, som vi hållit årlingen de senaste 3 åren!
-            </p>
-            <p>
-                Behöver Ni övernatta så är vi glada att meddela Er att vi har snackat med ett lokalt hotell, som kommer erbjuda rum och måltid för ett rabatterat pris!
-            </p>
-            <p>
-                Att anmäla sig, tar minst 3 minuter av din tid att gå igenom. För att anmäla sig måste man vara minst av myndig ålder. Att vara med på hela konferensen kostar 120 kr och enskild dag kostar 50 kr. Två dagar kostar 100 kr.
-            </p>
+    <main class="content content--flex">
+        <section class="container container--desktop">
+            <section class="message-box"> 
+                <p>
+                    Vad roligt att se att Ni vill anmäla Er till <strong>Better Webs</strong> konferens, som vi hållit årlingen de senaste 3 åren!
+                </p>
+                <p>
+                    Att anmäla sig, tar minst 3 minuter av din tid att gå igenom. För att anmäla sig måste man vara minst av myndig ålder. Att vara med på hela konferensen kostar 120 kr och enskild dag kostar 50 kr. Två dagar kostar 100 kr.
+                </p>
+            </section>   
+            <form class="form form--flex" action="#">
+                <h1 class="form__heading">Anmälan till konferensen</h1>
+                <section class="message-box"> 
+                    <p>
+                        Vår nästa konferens kommer äga rum i Karlstad CCC! Datuma som gäller är 9/12 till 11/12 (3 dagar).
+                    </p>
+                    <p>
+                        Behöver Ni övernatta så är vi glada att meddela Er att vi har snackat med hotellet Scandic Winn, som kommer erbjuda rum och måltid för ett rabatterat pris!
+                    </p>
+                </section>   
+
+                <!-- Förnamn och efternamn -->
+                <section class="form__box form__box--column">
+                    <label for="register-name">Vad heter Ni?</label>
+                    <input class="form__text" id="register-name" type="text" value="" minlength="7" maxlength="32" placeholder="Per Bolund" title="Förnamn och efternamn" required />
+                    <span class="input-error-msg input-error-msg--hidden">Vänligen skriv in ditt fulla namn.</span>
+                </section>
+
+                <!-- Ålder -->
+                <section class="form__box form__box--column">
+                    <label class="form__label" for="register-age">Hur gammal är Ni?</label>
+                    <input class="form__text" id="register-age" type="number" value="18" min="18" placeholder="25" title="Ålder" required />
+                    <span class="input-error-msg input-error-msg--hidden">Vänligen välj din ålder.</span>
+                </section>
+
+                <!-- Antalet dagar -->
+                <section class="form__box form__box--row">
+                    <p>Vill du vara med på hela konferensen eller vill du vara här nån dag?</p>
+                    <input class="form__radio" id="register-for-conference-all" type="radio" name="register-for-conference" value="all" required />
+                    <label class="form__label" for="register-for-conference-all">Hela konferensen</label>
+
+                    <input class="form__radio" id="register-for-conference-day" type="radio" name="register-for-conference" value="day" />
+                    <label class="form__label" for="register-for-conference-day">En av de möjliga dagarna</label>
+
+                    <input class="form__radio" id="register-for-conference-days"  type="radio" name="register-for-conference" value="days" />
+                    <label class="form__label" for="register-for-conference-days">Två av tre dagar</label>
+                </section>
+
+                <!-- Mat -->
+                <section class="form__box">
+                    <p>Vill du bli erbjuden mat till konferensen? Måltiderna kostar 50 kr och betalas hos hotellet.</p>
+                    <input class="form__radio" id="register-food-yes" type="radio" name="register-food" value="ja" required />
+                    <label class="form__label" for="register-food-yes">Ja, jag vill ha mat!</label>
+
+                    <section class="form__box-inside form__box-inside--hidden">
+                        <input class="form__radio" id="register-food-normal" type="radio" name="register-food-option" value="vanlig" required/>
+                        <label class="form__label" for="register-food-normal">Vanlig kost (glutenfri)</label>
+
+                        <input class="form__radio" id="register-food-vegan" type="radio" name="register-food-option" value="vegan" required/>
+                        <label class="form__label" for="register-food-vegan">Vegansk kost (glutenfri)</label>
+                    </section>
+
+                    <input class="form__radio" id="register-food-no" type="radio" name="register-food" value="nej"/>
+                    <label class="form__label" for="register-food-no">Nej, jag behöver ingen mat.</label>
+                </section>
+
+                <!-- Kontaktad -->
+                <section class="form__box">
+                    <p>Hur vill du bli meddelad?</p>
+                    <input class="form__radio" id="register-get-contacted-sms" type="radio" name="register-get-contacted" value="sms" required />
+                    <label class="form__label" for="register-get-contacted-sms">Genom SMS</label>
+
+                    <div class="form__box-inside form__box-inside--hidden">
+                        <label class="form__label" for="register-phone">Skriv in ditt telefonnummer:</label>
+                        <input class="form__text" id="register-phone" type="tel" maxlength="15" value="" placeholder="08-545 224 50" title="Telefonnummer" required />
+                        <span class="input-error-msg input-error-msg--hidden">Vänligen skriv in ditt telefonnummer.</span>
+                    </div>
+
+                    <input class="form__radio" id="register-get-contacted-mail" type="radio" name="register-get-contacted" value="epost" />
+                    <label class="form__label" for="register-get-contacted-mail">Genom E-post</label>
+
+                    <div class="form__box-inside form__box-inside--hidden">
+                        <label class="form__label" for="register-email">Skriv in din E-post:</label>
+                        <input class="form__text" id="register-email" type="email" value="" placeholder="per.bolund@email.se" title="E-postadress" required />
+                        <span class="input-error-msg input-error-msg--hidden">Vänligen skriv in din E-postadress.</span>
+                    </div>
+                </section>
+
+                <!-- Klar med formulär -->
+                <section class="form__box form__box--row">
+                    <p>Vill du skicka in anmälningen?</p>
+                    <div class="form__box-buttons">                    
+                        <button class="form__button" type="submit">Skicka in anmälan</button>
+                        <button class="form__button" type="reset">Göra om formuläret</button>
+                    </div>
+
+                </section>
+            </form>
         </section>
-        <form action="#">
-            <h2>Anmälan till vår nästkommande konferens i Karlstad</h2>
-
-            <!-- Förnamn och efternamn -->
-            <label for="register_name">Vad heter Ni?</label>
-            <input id="register_name" type="text" value="" minlength="7" maxlength="32" placeholder="Per Bolund" title="Förnamn och efternamn" required />
-            <span class="form-error-msg form-error-msg--hiddden">Vänligen skriv in ditt fulla namn.</span>
-
-            <!-- Ålder -->
-            <label for="register_age">Hur gammal är Ni?</label>
-            <input id="register_age" type="number" value="18" min="18" placeholder="25" title="Ålder" required />
-            <span class="form-error-msg form-error-msg--hiddden">Vänligen välj din ålder.</span>
-
-            <!-- Antalet dagar -->
-            <p>Vill du vara med på hela konferensen (3 dagar, 9/12 till 11/12), eller vill du vara här nån dag?</p>
-            <input id="register_for_conference_all" type="radio" name="register_for_conference" value="all" required />
-            <label for="register_for_conference_all">Hela konferensen</label>
-
-            <input id="register_for_conference_day" type="radio" name="register_for_conference" value="day" />
-            <label for="register_for_conference_day">En av de möjliga dagarna</label>
-
-            <input id="register_for_conference_days"  type="radio" name="register_for_conference" value="days" />
-            <label for="register_for_conference_days">Två av tre dagar</label>
-
-            <!-- Mat -->
-            <p>Vill du bli erbjuden mat till konferensen? Kostnaden räknas ihop med antalet dagar du är med oss. Måltiderna kostar 50 kr och betalas hos hotellet.</p>
-            <input id="register_food_yes" type="radio" name="register_food" value="ja" required/>
-            <label for="register_food_yes">Ja, jag vill ha mat!</label>
-
-            <div class="form-box form-box--hidden">
-                <input id="register_food_normal" type="radio" name="register_food_option" value="vanlig" required/>
-                <label for="register_food_normal">Vanlig kost (glutenfri)</label>
-
-                <input id="register_food_vegan" type="radio" name="register_food_option" value="vegan" required/>
-                <label for="register_food_vegan">Vegansk kost (glutenfri)</label>
-            </div>
-
-            <input id="register_food_no" type="radio" name="register_food" value="nej"/>
-            <label for="register_food_no">Nej, jag behöver ingen mat.</label>
-            
-            <!-- Kontaktad -->
-            <p>Hur vill du bli meddelad?</p>
-            <input id="register_get_contacted_sms" type="radio" name="register_get_contacted" value="sms" required />
-            <label for="register_get_contacted_sms">Genom SMS</label>
-
-            <div class="form-box form-box--hidden">
-                <label for="register_phone">Skriv in ditt telefonnummer:</label>
-                <input id="register_phone" type="tel" maxlength="15" value="" placeholder="08-545 224 50" title="Telefonnummer" required />
-                 <span class="form-error-msg form-error-msg--hiddden">Vänligen skriv in ditt telefonnummer.</span>
-            </div>
-
-            <input id="register_get_contacted_mail" type="radio" name="register_get_contacted" value="epost" />
-            <label for="register_get_contacted_mail">Genom E-post</label>
-
-            <div class="form-box form-box--hidden">
-                <label for="register_email">Skriv in din E-post:</label>
-                <input id="register_email" type="email" value="" placeholder="per.bolund@email.se" title="E-postadress" required />
-                <span class="form-error-msg form-error-msg--hiddden">Vänligen skriv in din E-postadress.</span>
-            </div>
-
-            <!-- Klar med formulär -->
-            <p>Känner du dig klar med anmälningen?</p>
-            <button type="submit">Ja, skicka in anmälan</button>
-            <button type="reset">Nej, jag vill göra om formuläret</button>
-        </form>
     </main>
 </body>
 </html>
