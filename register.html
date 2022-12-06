@@ -110,29 +110,41 @@
                 <!-- Antalet dagar -->
                 <section class="form__box form__box--row">
                     <p>Vill du vara med på hela konferensen eller vill du vara här nån dag?</p>
-                    <input class="form__radio" id="register-for-conference-all" type="radio" name="register-for-conference" value="all" required />
-                    <label class="form__label" for="register-for-conference-all">Hela konferensen</label>
+                    <div class="form__item-container">
+                        <input class="form__radio" id="register-for-conference-all" type="radio" name="register-for-conference" value="all" required />
+                        <label class="form__label" for="register-for-conference-all">Hela konferensen</label>
+                    </div>
+                    
+                    <div class="form__item-container">
+                        <input class="form__radio" id="register-for-conference-day" type="radio" name="register-for-conference" value="day" />
+                        <label class="form__label" for="register-for-conference-day">En av de möjliga dagarna</label>
+                    </div>
 
-                    <input class="form__radio" id="register-for-conference-day" type="radio" name="register-for-conference" value="day" />
-                    <label class="form__label" for="register-for-conference-day">En av de möjliga dagarna</label>
-
-                    <input class="form__radio" id="register-for-conference-days"  type="radio" name="register-for-conference" value="days" />
-                    <label class="form__label" for="register-for-conference-days">Två av tre dagar</label>
+                    <div class="form__item-container">
+                        <input class="form__radio" id="register-for-conference-days"  type="radio" name="register-for-conference" value="days" />
+                        <label class="form__label" for="register-for-conference-days">Två av tre dagar</label>
+                    </div>
                 </section>
 
                 <!-- Mat -->
                 <section class="form__box">
                     <p>Vill du bli erbjuden mat till konferensen? Måltiderna kostar 50 kr och betalas hos hotellet.</p>
-                    <input class="form__radio" id="register-food-yes" type="radio" name="register-food" value="ja" required />
-                    <label class="form__label" for="register-food-yes">Ja, jag vill ha mat!</label>
+                    <div class="form__item-container">
+                        <input class="form__radio" id="register-food-yes" type="radio" name="register-food" value="ja" required />
+                        <label class="form__label" for="register-food-yes">Ja, jag vill ha mat!</label>
 
-                    <section class="form__box-inside form__box-inside--hidden">
-                        <input class="form__radio" id="register-food-normal" type="radio" name="register-food-option" value="vanlig" required/>
-                        <label class="form__label" for="register-food-normal">Vanlig kost (glutenfri)</label>
-
-                        <input class="form__radio" id="register-food-vegan" type="radio" name="register-food-option" value="vegan" required/>
-                        <label class="form__label" for="register-food-vegan">Vegansk kost (glutenfri)</label>
-                    </section>
+                        <section class="form__box-inside form__box-inside--hidden">
+                            <div class="form__item-container">
+                                <input class="form__radio" id="register-food-normal" type="radio" name="register-food-option" value="vanlig" required/>
+                                <label class="form__label" for="register-food-normal">Vanlig kost (glutenfri)</label>
+                            </div>
+                            
+                            <div class="form__item-container">
+                                <input class="form__radio" id="register-food-vegan" type="radio" name="register-food-option" value="vegan" required/>
+                                <label class="form__label" for="register-food-vegan">Vegansk kost (glutenfri)</label>
+                            </div>
+                        </section>
+                    </div>
 
                     <input class="form__radio" id="register-food-no" type="radio" name="register-food" value="nej"/>
                     <label class="form__label" for="register-food-no">Nej, jag behöver ingen mat.</label>
