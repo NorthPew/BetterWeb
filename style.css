@@ -199,6 +199,31 @@
     width: 100%;
 }
 
+/* Hero Image */
+.hero-image-container {
+    width: auto;
+    height: 22em;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./imgs/hero-image.png);
+    background-size: cover;
+    border-radius: 9.5px;
+    box-shadow: var(--shadow-medium);
+    color: #fbfbfb;
+    padding: 1.25em;
+}
+
+.hero-image-container > h1 {
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero-image-container > p {
+    font-size: 26px;
+}
+
 /* Message Box */
 .message-box {
     box-shadow: var(--shadow-medium);
@@ -367,6 +392,10 @@
     /* Container */
     .container--desktop {
         width: 65vw;
+    }
+    /* Hero Image */
+    .hero-image-container {
+        flex-flow: column wrap;
     }
     /* Message Box */
     .message-box {
