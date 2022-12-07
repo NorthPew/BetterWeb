@@ -183,6 +183,9 @@
     width: 100%;
     height: 100%;
     background-color: #FFF;
+}
+
+.content--padding {
     padding: 1em;
     padding-left: 1.35em;
     padding-right: 1.35em;
@@ -209,14 +212,13 @@
     align-items: center;
     background-image: url(./imgs/hero-image.png);
     background-size: cover;
-    border-radius: 9.5px;
     box-shadow: var(--shadow-medium);
     color: #fbfbfb;
     padding: 1.25em;
 }
 
 .hero-image-container > h1 {
-    font-size: 40px;
+    font-size: 38px;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -238,6 +240,29 @@
 
 .message-box > * {
     padding: .25em 0em .25em;
+}
+
+/* Card */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 18em);
+    width: 100%;
+    height: auto;
+    column-gap: 2em;
+    place-content: center;
+}
+
+.card-box {
+    box-shadow: var(--shadow-medium);
+    border-radius: 9.5px;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    background-color: #fbfbfb;
+    padding: 1.95em;
+    display: flex;
+    flex-flow: column wrap;
+    width: 18em;
+    min-height: 16em;
 }
 
 /* Form */
@@ -390,12 +415,13 @@
         justify-content: center;
     }
     /* Container */
-    .container--desktop {
+    .container-center-desktop {
         width: 65vw;
     }
     /* Hero Image */
     .hero-image-container {
         flex-flow: column wrap;
+        height: 24em;
     }
     /* Message Box */
     .message-box {
