@@ -247,7 +247,6 @@
     align-items: center;
     background-image: url(./imgs/celebrate.jpg);
     background-size: cover;
-    box-shadow: var(--shadow-medium);
     color: #fbfbfb;
     padding: 1.25em;
 }
@@ -371,6 +370,23 @@
     height: 26em;
     padding-top: .75em;
     padding-bottom: .75em;
+}
+
+/* Footer */
+.footer {
+    width: 100%;
+    min-height: 22em;
+    background-color: var(--menu-background);
+    padding: 1.25em;
+}
+
+.footer__container {
+    display: grid;
+    grid-auto-columns: minmax(120px, auto);
+}
+
+.footer__branding {
+    min-width: 12em;
 }
 
 /* Form */
