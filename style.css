@@ -213,6 +213,11 @@
     width: 100%;
 }
 
+.container__heading, .form__heading {
+    font-size: 32px;
+    text-align: center;
+}
+
 /* Hero Image */
 .hero-image-container {
     width: auto;
@@ -335,6 +340,11 @@
     height: 3.75em;
 }
 
+.card__summary {
+    grid-area: csummary;
+    font-family: 'Poppins', sans-serif;
+}
+
 .card__link, .card__link:link, .card__link:visited {
     grid-area: clink;
     font-family: 'Poppins', sans-serif;
@@ -372,6 +382,20 @@
     padding-bottom: .75em;
 }
 
+.card--seminar {
+    grid-template-areas:
+    "cheading cheading cheading"
+    ". ctext ."
+    "csummary csummary csummary";
+    row-gap: .25em;
+    place-items: center;
+    min-height: 26em;
+}
+
+.card--seminar > .card__text {
+    height: auto;
+}
+
 /* Footer */
 .footer {
     width: 100%;
@@ -397,10 +421,6 @@
 .form--flex {
     display: flex;
     flex-flow: column wrap;
-}
-
-.form__heading {
-    text-align: center;
 }
 
 .form__box > p {
