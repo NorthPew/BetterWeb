@@ -228,13 +228,63 @@
     padding: 1.25em;
 }
 
-.hero-image-container > h1 {
+.hero-image-container__heading {
     font-size: 38px;
     font-family: 'Poppins', sans-serif;
 }
 
-.hero-image-container > p {
+.hero-image-container__text {
     font-size: 26px;
+}
+
+/* Key figures (Nyckeltal) */
+.keys {
+    width: auto;
+    min-height: 20em;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./imgs/celebrate.jpg);
+    background-size: cover;
+    box-shadow: var(--shadow-medium);
+    color: #fbfbfb;
+    padding: 1.25em;
+}
+
+.keys__heading {
+    font-size: 32px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.keys__container {
+    width: 100%;
+    height: auto;
+}
+
+.keys__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 16em);
+    column-gap: 2em;
+    place-content: center;
+}
+
+.keys__holder {
+    width: auto;
+    display: flex;
+    align-items: center;
+    flex-flow: column wrap;
+    padding-top: .85em;
+    padding-bottom: .25em;
+}
+
+.keys__holder-heading {
+    font-size: 28px;
+}
+
+.keys__holder-text {
+    font-size: 22px;
 }
 
 /* Message Box */
