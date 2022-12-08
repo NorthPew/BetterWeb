@@ -75,8 +75,17 @@
     justify-content: center;
 }
 
+#menu-checkbox {
+    justify-self: flex-end;
+    align-self: flex-end;
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    cursor: pointer;
+}
+
 /* Drawer */
-.drawer, #menu-checkbox {
+.drawer {
     height: 0px;
     width: 0px;
     visibility: hidden;
