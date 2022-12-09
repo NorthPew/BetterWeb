@@ -118,11 +118,11 @@
     margin-bottom: .85em;
 }
 
-.drawer__list, .drawer__list-links {
+.drawer__list, .drawer__list-links, .footer__list {
     list-style-type: none;
 }
 
-.drawer__list-icon, .drawer__list-link {
+.drawer__list-icon, .drawer__list-link, .footer__list-link {
     text-decoration: none;
 }
 
@@ -140,7 +140,8 @@
 
 /* Stuff for Menu and Drawer */
 .drawer__list-icon:link, .drawer__list-icon:visited,
-.drawer__list-link:link, .drawer__list-link:visited
+.drawer__list-link:link, .drawer__list-link:visited,
+.footer__list-link:link, .footer__list-link:visited
 {
     color: var(--menu-color);
 }
@@ -251,7 +252,7 @@
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    background-image: url(./imgs/celebrate.jpg);
+    background-image: url(./imgs/triangles.png);
     background-size: cover;
     color: #fbfbfb;
     padding: 1.25em;
@@ -322,7 +323,7 @@
 }
 
 .card__heading {
-    grid-area: cheading;
+    grid-area: cheading; /* Card heading */
     text-align: center;
     height: 2.75em;
     display: flex;
@@ -402,17 +403,39 @@
     width: 100%;
     min-height: 22em;
     background-color: var(--menu-background);
-    padding: 1.25em;
+    padding: 1.75em  1.35em 1.75em 1.35em;
 }
 
 .footer__container {
     display: grid;
-    grid-auto-columns: minmax(120px, auto);
+    grid-template-columns: repeat(auto-fit, 9em);
 }
 
 .footer__branding {
-    min-width: 12em;
+    width: 9em;
+    border-right: 2px solid #fbfbfb;
+    display: flex;
+    align-items: center;
 }
+
+.footer__list-link {
+    width: 5em;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 1.5em;
+}
+
+.footer__list-link:hover {
+    transition: all ease-in-out .15s;
+    border-bottom: 5px solid var(--menu-color);
+    font-size: 28px;
+    height: 40px;
+    align-items: flex-end;
+}
+
 
 /* Form */
 .form > *:not(.message-box, .form__box--column) {
@@ -617,5 +640,12 @@
         width: 22em;
         flex-flow: row wrap;
         min-height: 3.25em;
+    }
+    /* Footer */
+    .footer__container {
+        grid-template-columns: repeat(auto-fit, 34em);
+    }
+    .footer__branding {
+        min-width: 34em;
     }
 }
