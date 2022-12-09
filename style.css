@@ -487,6 +487,10 @@
     width: 6em;
 }
 
+.form__box--column > #register-address {
+    width: 20em;
+}
+
 .form__radio + .form__label {
     padding-right: 1.5em;
     padding-left: .25em;
