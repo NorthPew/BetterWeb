@@ -235,6 +235,10 @@
     padding: 1.25em;
 }
 
+.hero-image-container--about {
+    background-image: url(./imgs/road.jpg);
+}
+
 .hero-image-container__heading {
     font-size: 38px;
     font-family: 'Poppins', sans-serif;
@@ -394,8 +398,22 @@
     min-height: 26em;
 }
 
-.card--seminar > .card__text {
+.card--about {
+    grid-template-areas:
+    "cheading cheading cheading"
+    "cimage cimage cimage"
+    "csummary csummary csummary";
+    row-gap: .25em;
+    place-items: center;
+    min-height: 26em;
+}
+
+.card--seminar > .card__text, .card--about > .card__text {
     height: auto;
+}
+
+.card--about > .card__image {
+    height: 18em;
 }
 
 /* Footer */
@@ -589,6 +607,10 @@
 
     /* Menu */
     .menu {
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+    #menu-checkbox:checked + .drawer {
         padding-left: 3em;
         padding-right: 3em;
     }
