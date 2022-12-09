@@ -107,8 +107,8 @@
                 <!-- Ålder -->
                 <section class="form__box form__box--column">
                     <label class="form__label" for="register-age">Hur gammal är Ni?</label>
-                    <input class="form__text" id="register-age" type="number" value="18" min="18" placeholder="25" title="Ålder" required />
-                    <span class="input-error-msg input-error-msg--hidden">Vänligen välj din ålder.</span>
+                    <input class="form__text" id="register-age" type="number" value="" min="18" placeholder="25" title="Ålder" required />
+                    <span class="input-error-msg input-error-msg--hidden">Du måste vara minst av myndig ålder.</span>
                 </section>
 
                 <!-- Antalet dagar -->
@@ -133,6 +133,9 @@
                 <!-- Mat -->
                 <section class="form__box">
                     <p>Vill du bli erbjuden mat till konferensen? Måltiderna kostar 50 kr och betalas hos hotellet.</p>
+                    <input class="form__radio" id="register-food-no" type="radio" name="register-food" value="nej"/>
+                    <label class="form__label" for="register-food-no">Nej, jag behöver ingen mat.</label>
+
                     <div class="form__item-container">
                         <input class="form__radio" id="register-food-yes" type="radio" name="register-food" value="ja" required />
                         <label class="form__label" for="register-food-yes">Ja, jag vill ha mat!</label>
@@ -149,9 +152,6 @@
                             </div>
                         </section>
                     </div>
-
-                    <input class="form__radio" id="register-food-no" type="radio" name="register-food" value="nej"/>
-                    <label class="form__label" for="register-food-no">Nej, jag behöver ingen mat.</label>
                 </section>
 
                 <!-- Kontaktad -->
